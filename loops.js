@@ -10,8 +10,19 @@ function forLoop(array){
 }
 
 function whileLoop(n){
-  let n = 100;
   while (n > 0){
     console.log(--n)
   }
+  return "done"
+}
+
+function doWhileLoop(array){
+  function maybeTrue() {
+    return Math.random() >= 0.5
+  }
+
+  do {
+    array.pop()
+  } while (array.length > 0 && maybeTrue());
+  return array
 }
